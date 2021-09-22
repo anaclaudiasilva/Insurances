@@ -1,0 +1,113 @@
+<main>
+  <div class="title">
+    <h2>Quer saber quanto custa seu seguro?</h2>
+    <p>Comece respondendo as perguntas abaixo e descubra :)</p>
+  </div>
+
+  <section>
+    <form #form="ngForm" novalidate>
+      <small>*Obrigatórios</small>
+
+      <aside class="form-group">
+        <p>O imóvel está *</p>
+
+        <div class="field-input">
+          <input
+            type="radio"
+            name="status"
+            id="status"
+            required/>
+          <label class="form-control-placeholder" for="status">Ocupado</label>
+
+          <input
+            type="radio"
+            name="status"
+            id="status"
+            required/>
+          <label class="form-control-placeholder" for="status">Desocupado</label>
+        </div>
+      </aside>
+
+      <aside class="form-group">
+        <p>O imóvel foi construído com *</p>
+
+        <input
+          type="radio"
+          name="constructed"
+          id="constructed"
+          required/>
+        <label class="form-control-placeholder" for="constructed">Madeira</label>
+
+        <input
+          type="radio"
+          name="constructed"
+          id="constructed"
+          required/>
+        <label class="form-control-placeholder" for="constructed">Alvenaria (tijolos, cimento, pedras ou blocos de concreto)</label>
+      </aside>
+
+      <aside class="form-group">
+        <p>O seguro é para qual tipo de imóvel? *</p>
+
+        <input
+          type="radio"
+          name="immobile-type"
+          id="immobile-type"
+          required/>
+        <label class="form-control-placeholder" for="immobile-type">Casa</label>
+
+        <input
+          type="radio"
+          name="immobile-type"
+          id="immobile-type"
+          required/>
+        <label class="form-control-placeholder" for="immobile-type">Apartamento</label>
+
+        <input
+          type="radio"
+          name="immobile-type"
+          id="immobile-type"
+          required/>
+        <label class="form-control-placeholder" for="immobile-type">Chácaras, sítios ou fazendas</label>
+      </aside>
+
+      <!-- <aside class="form-group">
+        <p>O imóvel está em condomínio fechado? *</p>
+
+        <input
+          type="radio"
+          name="gated-community"
+          id="gated-community"
+          required/>
+        <label class="form-control-placeholder" for="gated-community">Sim</label>
+
+        <input
+          type="radio"
+          name="gated-community"
+          id="gated-community"
+          required/>
+        <label class="form-control-placeholder" for="gated-community">Não</label>
+      </aside> -->
+
+      <aside class="form-group">
+        <p>Você usa o imóvel para *</p>
+
+        <input
+          type="radio"
+          name="occupiedWith"
+          id="occupiedWith"
+          required/>
+        <label class="form-control-placeholder" for="occupiedWith">Moradia</label>
+
+        <input
+          type="radio"
+          name="occupiedWith"
+          id="occupiedWith"
+          required/>
+        <label class="form-control-placeholder" for="occupiedWith">Veraneio</label>
+      </aside>
+
+      <button (click)="callQuoteModal()">Continuar cotação</button>
+    </form>
+  </section>
+</main>

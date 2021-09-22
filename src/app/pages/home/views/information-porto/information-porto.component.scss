@@ -1,0 +1,19 @@
+:host {
+  font-size: 16px;
+  color: #333;
+
+  .info-container {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background-color: rgba(245, 245, 245, 0.959);
+
+    figure {
+      margin: 0px 12px;
+
+      img {
+        width: 93px;
+      }
+    }
+  }
+}
