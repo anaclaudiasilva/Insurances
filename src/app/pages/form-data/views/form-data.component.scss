@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .row {
+    display: flex;
+    margin: 0 0 16px 0;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    label {
+      width: 100%;
+      max-width: 246px;
+    }
+
+    &:first-of-type {
+      label:nth-child(2) {
+        max-width: none;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      label:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  ::ng-deep {
+    .custom-select-v2 .select-items {
+      max-height: 218px !important;
+    }
+  }
+}

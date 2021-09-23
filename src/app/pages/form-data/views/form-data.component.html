@@ -1,0 +1,194 @@
+<main>
+  <h2>Dados do <strong>titular do seguro</strong></h2>
+  <p>Chegou a hora de reunir algumas informações para continuar com a cotação do seguro, vamos lá?</p>
+
+  <section>
+    <form #form="ngForm">
+      <div class="row">
+        <!-- Formulário dados titular -->
+        <label>
+          <input
+            type="text"
+            name="completeName"
+            id="completeName"
+            [class.has-value]="!!form.controls.completeName.value"
+          />
+
+          <label>Nome completo (Sem abreviações)*</label>
+
+          <p class="error-message"></p>
+        </label>
+
+        <label>
+          <input
+            type="text"
+            name="document"
+            id="document"
+            [class.has-value]="!!form.controls.document.value"
+          />
+
+          <label>CPF *</label>
+
+          <p class="error-message"></p>
+        </label>
+
+        <label>
+          <input
+            type="text"
+            name="birthDate"
+            id="birthDate"
+            [class.has-value]="!!form.controls.birthDate.value"
+          />
+
+          <label>Data de nascimento *</label>
+
+          <p class="error-message"></p>
+        </label>
+      </div>
+
+        <!-- Formulário dados residenciais -->
+      <div class="row">
+        <label>
+          <input
+            type="text"
+            name="zipCode"
+            id="zipCode"
+            [class.has-value]="!!form.controls.zipCode.value"
+          />
+
+          <label>Qual o CEP da sua residência? *</label>
+
+          <p class="error-message"></p>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>
+          <input
+            id="address"
+            type="text"
+            name="address"
+            id="address"
+            [class.has-value]="!!form.controls.address.value"
+            appNoSpecialChars
+          />
+
+          <label>Endereço*</label>
+
+          <p class="error-message"></p>
+        </label>
+
+        <label>
+          <input
+            type="number"
+            name="addressNumber"
+            id="addressNumber"
+            [class.has-value]="!!form.controls.addressNumber.value || form.controls.addressNumber.value === 0"
+            appOnlyNumbers
+          />
+
+          <label>Número*</label>
+
+          <p class="error-message"></p>
+        </label>
+
+        <label>
+          <input
+            type="text"
+            name="neighborhood"
+            id="neighborhood"
+            [class.has-value]="!!form.controls.neighborhood.value"
+            appNoSpecialChars
+          />
+
+          <label>Bairro*</label>
+
+          <p class="error-message"></p>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>
+          <input
+            id="complement"
+            type="text"
+            name="complement"
+            id="complement"
+            [class.has-value]="!!form.controls.complement.value"
+            appNoSpecialChars
+          />
+
+          <label>Complemento</label>
+        </label>
+
+        <label>
+          <input
+            id="city"
+            type="text"
+            name="city"
+            id="city"
+            [class.has-value]="!!form.controls.city.value"
+            appNoSpecialChars
+          />
+
+          <label>Cidade*</label>
+
+          <p class="error-message"></p>
+        </label>
+
+        <label
+          [class.hidden]="form.controls.state.enabled"
+        >
+          <input
+            type="text"
+            name="state"
+            id="state"
+            [class.has-value]="!!form.controls.state.value"
+            appNoSpecialChars
+          />
+
+          <label>Estado*</label>
+        </label>
+
+        <div class="field"
+          [class.hidden]="form.controls.state.disabled">
+          <!-- <app-custom-select
+            id="state"
+            [control]="form.controls.state"
+            placeholder="Estado"
+            display="federalState"
+          >
+            <ng-container *ngFor="let state of states">
+              <app-custom-option [value]="state">
+                {{state.federalState}}
+              </app-custom-option>
+            </ng-container>
+          </app-custom-select> -->
+
+          <p class="error-message"></p>
+        </div>
+      </div>
+    </form>
+
+    <label>
+      Os dados inseridos por você poderão ser compartilhados com empresas parceiras para cotação e contratação dos produtos
+      escolhidos e poderão ser tratados de acordo com a nossa Política de Privacidade disponível em nossos sites e aplicativos
+    </label>
+
+    <p>
+      Porto Seguro Cia. de Seguros Gerais. CNPJ 61.198.164/0001-60. Consulte as Condições Gerais em www.portoseguro.com.br/seguro-residencial.
+      Processos SUSEP: Residência 15414.002288/2005-85. Responsabilidade Civil Patrimonial 15414.900937/2017-49.
+      O registro do produto é automático e não representa aprovação ou recomendação por parte da Susep representando, exclusivamente,
+      sua adequação às normas em vigor.
+    </p>
+
+    <p>
+      A Itaú Corretora de Seguros S.A comercializa com exclusividade os produtos: seguro residencial e seguro automóvel do Grupo
+      Porto Seguro S.A, na figura de corretora de seguros.
+    </p>
+
+    <button>
+      Ver o preço do meu seguro
+    </button>
+  </section>
+</main>

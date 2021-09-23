@@ -1,6 +1,10 @@
 <section>
   <div class="close" (click)="close()"></div>
 
+  <figure>
+    <img src="https://itau-mkt-place-seguros.s3-sa-east-1.amazonaws.com/images/residencial/ilustracoes/resid-modal-block-icone-alerta-seguros.svg"  alt="modal-alerta-seguros" />
+  </figure>
+
   <h3 class="title">
     Cotação do meu seguro residencial
   </h3>
@@ -14,11 +18,13 @@
   <div class="buttons">
     <button
       type="button"
+      class="btnBack"
       (click)="close()"
     >Voltar a página inicial</button>
 
     <button
       type="button"
+      class="redo"
     >Cotar outro tipo de imóvel</button>
   </div>
 </section>

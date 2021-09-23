@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
 import { ModalQuoteInvalidComponent } from './components/modal-quote-invalid/modal-quote-invalid.component';
+import { ModalDetailsComponent } from './components/modal-details/modal-details.component';
 
 @NgModule({
   imports: [
@@ -14,11 +15,13 @@ import { ModalQuoteInvalidComponent } from './components/modal-quote-invalid/mod
   ],
 
   declarations: [
-    ModalQuoteInvalidComponent
+    ModalQuoteInvalidComponent,
+    ModalDetailsComponent
   ],
 
   entryComponents: [
-    ModalQuoteInvalidComponent
+    ModalQuoteInvalidComponent,
+    ModalDetailsComponent
   ]
 })
 export class SharedModule { }
