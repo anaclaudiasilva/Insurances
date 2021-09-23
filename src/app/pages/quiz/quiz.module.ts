@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { QuizFormComponent } from './quiz-form/quiz-form.component';
+import { QuizFormComponent } from './views/quiz-form/quiz-form.component';
 
 @NgModule({
   imports: [

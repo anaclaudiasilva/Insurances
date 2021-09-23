@@ -2,7 +2,7 @@
   display: flex;
   color: #FFFFFF;
   font-weight: 500;
-  height: 440px;
+  min-height: 440px;
   width: 100%;
   background-image: url("https://itau-mkt-place-seguros.s3-sa-east-1.amazonaws.com/images/residencial/img-banner.png");
   background-size: cover;
@@ -12,6 +12,7 @@
   .banner-container {
     padding: 40px;
     align-self: center;
+    text-align: left;
 
     h1 {
       font-size: 3rem;

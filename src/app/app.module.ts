@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { CoverageModule } from './pages/coverage/coverage.module';
 import { FormDataModule } from './pages/form-data/form-data.module';
 import { HomeModule } from './pages/home/home.module';
-import { QuizModule } from './pages/quiz/views/quiz.module';
+import { QuizModule } from './pages/quiz/quiz.module';
 
 @NgModule({
   declarations: [
