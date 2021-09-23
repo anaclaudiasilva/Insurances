@@ -8,6 +8,7 @@ import { CoverageModule } from './pages/coverage/coverage.module';
 import { FormDataModule } from './pages/form-data/form-data.module';
 import { HomeModule } from './pages/home/home.module';
 import { QuizModule } from './pages/quiz/quiz.module';
+import { ResultsModule } from './pages/results/results.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { QuizModule } from './pages/quiz/quiz.module';
     QuizModule,
     ModalModule.forRoot(),
     CoverageModule,
-    FormDataModule
+    FormDataModule,
+    ResultsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,138 @@
+<section>
+  <article>
+    <h2>Coberturas</h2>
+    <p>Os valores das coberturas já estão simulados, mas você pode deixar do seu jeito.</p>
+
+    <aside>
+      <h3>Coberturas escolhidas</h3>
+
+      <ul>
+        <li>
+          <figure>
+            <img src="https://itau-mkt-place-seguros.s3-sa-east-1.amazonaws.com/images/residencial/ilustracoes/incendio.svg"/>
+          </figure>
+
+          <h3>Incêndio, explosão, implosão, fumaça e queda de aeronave</h3>
+          <p class="included">(incluso)</p>
+
+          <label>
+            <input type="checkbox" id="text" checked/>
+            <span class="checked"></span>
+          </label>
+
+          <div class="btn-detail">
+            <button>Ver detalhes</button>
+
+            <span class="line"></span>
+          </div>
+
+          <div>
+            <p>
+              Valor da cobertura em caso de sinsitro até
+              <strong>R$ 300.000,00</strong>
+            </p>
+
+            <p>
+              + R$ 33,14 <br />
+              por parcela
+            </p>
+
+            <span class="line"></span>
+          </div>
+
+          <p>O valor dessa cobertura <strong>não poderá ser superior ao valor do imóvel</strong></p>
+        </li>
+      </ul>
+    </aside>
+
+    <aside>
+      <h3>Agora que já viu os valores, quer incluir mais coberturas?</h3>
+
+      <ul>
+        <li>
+          <figure>
+            <img src="https://itau-mkt-place-seguros.s3-sa-east-1.amazonaws.com/images/residencial/ilustracoes/incendio.svg"/>
+          </figure>
+
+          <h3>Danos elétricos</h3>
+
+          <div>
+            <p>
+              Valor da cobertura em caso de sinsitro até
+              <strong>R$ 300.000,00</strong>
+            </p>
+
+            <p>
+              + R$ 33,14 <br />
+              por parcela
+            </p>
+
+            <label>
+              <input type="checkbox" id="text" checked/>
+              <span class="checked"></span>
+            </label>
+
+            <span class="line"></span>
+          </div>
+
+          <p>O valor da participação obrigatória do segurado (franquia) será de 10% das indenizações com mínimo de R$ 550,00</p>
+        </li>
+      </ul>
+    </aside>
+  </article>
+
+  <article>
+    <aside>
+      <p>Em até 6 vezes sem juros de
+        <strong>R$ 33,14</strong>
+        ou R$ 198,86 à vista
+      </p>
+
+      <span class="line"></span>
+
+      <h3>Detalhes do pacote</h3>
+
+      <select class="custom-select custom-select-xg dropdown">
+        <option id="0" value="cidade" selected>
+          1 Cobertura selecionada <span>R$198,86</span>
+        </option>
+        <option [attr.id]="cities.city" [ngValue]="cities.city"  *ngFor="let cities of citiesList">
+          Incêncio, explosão, implosão, fumaça e queda de aeronave
+        </option>
+      </select>
+
+      <select class="custom-select custom-select-xg dropdown">
+        <option id="0" value="cidade" selected>
+          Forma de pagamento
+        </option>
+        <option [attr.id]="cities.city" [ngValue]="cities.city"  *ngFor="let cities of citiesList">{{cities.city}}</option>
+      </select>
+
+      <select class="custom-select custom-select-xg dropdown">
+        <option id="0" value="cidade" selected>
+          Vigência
+        </option>
+        <option [attr.id]="cities.city" [ngValue]="cities.city"  *ngFor="let cities of citiesList">{{cities.city}}</option>
+      </select>
+
+      <select class="custom-select custom-select-xg dropdown">
+        <option id="0" value="cidade" selected>
+          Carência
+        </option>
+        <option [attr.id]="cities.city" [ngValue]="cities.city"  *ngFor="let cities of citiesList">{{cities.city}}</option>
+      </select>
+    </aside>
+
+    <a>Ver condições gerais do seguro residencial habitual</a>
+
+    <aside>
+      <strong>Dúvidas?</strong>
+
+      <p><strong>4020 2031</strong> - Capitais e regiões metropolitanas</p>
+      <p><strong>0800 545 1150</strong> - demais regiões</p>
+      <p>Atendimento: 2º à 6º das 9h às 18h</p>
+
+      <a>Se preferir deixe seus dados e nós entramos em contato no horário que você escolher</a>
+    </aside>
+  </article>
+</section>
