@@ -11,7 +11,6 @@
             type="text"
             name="completeName"
             id="completeName"
-            [class.has-value]="!!form.controls.completeName.value"
           />
 
           <label>Nome completo (Sem abreviações)*</label>
@@ -24,7 +23,7 @@
             type="text"
             name="document"
             id="document"
-            [class.has-value]="!!form.controls.document.value"
+            appOnlyNumbers
           />
 
           <label>CPF *</label>
@@ -37,7 +36,6 @@
             type="text"
             name="birthDate"
             id="birthDate"
-            [class.has-value]="!!form.controls.birthDate.value"
           />
 
           <label>Data de nascimento *</label>
@@ -53,7 +51,7 @@
             type="text"
             name="zipCode"
             id="zipCode"
-            [class.has-value]="!!form.controls.zipCode.value"
+            appOnlyNumbers
           />
 
           <label>Qual o CEP da sua residência? *</label>
@@ -69,7 +67,6 @@
             type="text"
             name="address"
             id="address"
-            [class.has-value]="!!form.controls.address.value"
             appNoSpecialChars
           />
 
@@ -83,7 +80,6 @@
             type="number"
             name="addressNumber"
             id="addressNumber"
-            [class.has-value]="!!form.controls.addressNumber.value || form.controls.addressNumber.value === 0"
             appOnlyNumbers
           />
 
@@ -97,7 +93,6 @@
             type="text"
             name="neighborhood"
             id="neighborhood"
-            [class.has-value]="!!form.controls.neighborhood.value"
             appNoSpecialChars
           />
 
@@ -114,7 +109,6 @@
             type="text"
             name="complement"
             id="complement"
-            [class.has-value]="!!form.controls.complement.value"
             appNoSpecialChars
           />
 
@@ -127,7 +121,6 @@
             type="text"
             name="city"
             id="city"
-            [class.has-value]="!!form.controls.city.value"
             appNoSpecialChars
           />
 
@@ -136,22 +129,18 @@
           <p class="error-message"></p>
         </label>
 
-        <label
-          [class.hidden]="form.controls.state.enabled"
-        >
+        <label>
           <input
             type="text"
             name="state"
             id="state"
-            [class.has-value]="!!form.controls.state.value"
             appNoSpecialChars
           />
 
           <label>Estado*</label>
         </label>
 
-        <div class="field"
-          [class.hidden]="form.controls.state.disabled">
+        <div class="field">
           <!-- <app-custom-select
             id="state"
             [control]="form.controls.state"
@@ -187,7 +176,7 @@
       Porto Seguro S.A, na figura de corretora de seguros.
     </p>
 
-    <button>
+    <button routerLink="/processando">
       Ver o preço do meu seguro
     </button>
   </section>

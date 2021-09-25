@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CoverageComponent } from './views/coverage.component';
+import { CoverageService } from './services/coverage.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,10 @@ import { CoverageComponent } from './views/coverage.component';
 
   exports: [
     CoverageComponent
+  ],
+
+  providers: [
+    CoverageService
   ]
 })
 

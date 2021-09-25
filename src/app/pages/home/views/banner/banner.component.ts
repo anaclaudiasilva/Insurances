@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 
 export class BannerComponent {
 
+  constructor() { }
+
+  public goToQuizForm() {
+    window.scrollTo(0, 800);
+  }
 }

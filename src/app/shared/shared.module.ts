@@ -11,15 +11,20 @@ import { ModalDetailsComponent } from './components/modal-details/modal-details.
     CommonModule,
     RouterModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
 
   declarations: [
     ModalQuoteInvalidComponent,
-    ModalDetailsComponent
+    ModalDetailsComponent,
   ],
 
   entryComponents: [
+    ModalQuoteInvalidComponent,
+    ModalDetailsComponent
+  ],
+
+  exports: [
     ModalQuoteInvalidComponent,
     ModalDetailsComponent
   ]

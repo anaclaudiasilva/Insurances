@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ModalQuoteInvalidComponent } from 'src/app/shared/components/modal-quote-invalid/modal-quote-invalid.component';
+import { QuizService } from '../../services/quiz.service';
 
 @Component({
   selector: 'app-quiz-form',
@@ -8,13 +9,30 @@ import { ModalQuoteInvalidComponent } from 'src/app/shared/components/modal-quot
   styleUrls: ['./quiz-form.component.scss']
 })
 
-export class QuizFormComponent {
+export class QuizFormComponent implements OnInit{
+
+  public questions: Array<any> = [];
+  public anwsers: Array<any> = [];
+  public noCompleteAnwsers = true;
+
+  public clicked = false;
 
   constructor(
-    private modal$: BsModalService
+    private modal$: BsModalService,
+    public quiz$: QuizService
   ) { }
 
-  public callQuoteModal(): void {
+  ngOnInit() {
+    this.callQuizService();
+  }
+
+  public callQuizService() {
+    this.quiz$.getQuestion().subscribe(res => {
+      this.questions = res;
+    });
+  }
+
+  public callQuoteModal() {
     this.modal$.show(ModalQuoteInvalidComponent, {
       class: 'modal-md',
       animated: true,

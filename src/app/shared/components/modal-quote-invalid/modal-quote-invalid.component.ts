@@ -13,6 +13,11 @@ export class ModalQuoteInvalidComponent {
     private modal: BsModalRef
   ) { }
 
+  public goToUp() {
+    this.modal.hide();
+    window.scrollTo(0, 0);
+  }
+
   public close(): void {
     this.modal.hide();
   }
